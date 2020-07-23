@@ -1,0 +1,19 @@
+site_name: DevCon2020 Notes
+nav:
+    - Home: index.md
+    - About: about.md
+    - 'Lessons Learned from Frankenstein': talks/frankenstein.md
+    - 'Cucumber': talks/cucumber.md
+    - 'Microfrontends': talks/microfrontends.md
+    - 'IoT Car Device': talks/iot-car-device.md
+    - 'Beyond Usability': talks/beyond-usability.md
+    - 'Life After Java 8': talks/life-after-java8.md
+    - 'Technical Anxiety': talks/technical-anxiety.md
+    - 'Artifactory': talks/artifactory.md
+    - 'IS Your Team Happy?': talks/is-your-team-happy.md
+    - 'UI and A11y.md': talks/ui-and-a11y.md
+    - 'Distributed Caching': talks/distributed-caching.md
+    - 'Learning and Building a Homelab': talks/learning-and-homelab.md
+    - 'Kubenetes': talks/kubenetes.md
+    - 'The ROI of Usability': talks/roi-of-usability.md
+theme: material
