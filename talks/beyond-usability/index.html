@@ -1,0 +1,622 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.1">
+    
+    
+      
+        <title>Beyond Usability - DevCon2020 Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a676eddb.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#beyond-usability" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="DevCon2020 Notes" class="md-header-nav__button md-logo" aria-label="DevCon2020 Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            DevCon2020 Notes
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Beyond Usability
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DevCon2020 Notes" class="md-nav__button md-logo" aria-label="DevCon2020 Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    DevCon2020 Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../frankenstein/" title="Lessons Learned from Frankenstein" class="md-nav__link">
+      Lessons Learned from Frankenstein
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../cucumber/" title="Cucumber" class="md-nav__link">
+      Cucumber
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../microfrontends/" title="Microfrontends" class="md-nav__link">
+      Microfrontends
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../iot-car-device/" title="IoT Car Device" class="md-nav__link">
+      IoT Car Device
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Beyond Usability
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Beyond Usability" class="md-nav__link md-nav__link--active">
+      Beyond Usability
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#participatory-design" class="md-nav__link">
+    Participatory Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-usability-can-amplify-political-conflicts" class="md-nav__link">
+    Improving usability can amplify political conflicts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adversarial-design" class="md-nav__link">
+    Adversarial Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-we-make-something-so-easy-that-anyone-can-use-it-human-beings-become-interchangable" class="md-nav__link">
+    When we make something so easy that anyone can use it, human beings become interchangable.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permaculture" class="md-nav__link">
+    Permaculture
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../life-after-java8/" title="Life After Java 8" class="md-nav__link">
+      Life After Java 8
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../technical-anxiety/" title="Technical Anxiety" class="md-nav__link">
+      Technical Anxiety
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../artifactory/" title="Artifactory" class="md-nav__link">
+      Artifactory
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../is-your-team-happy/" title="IS Your Team Happy?" class="md-nav__link">
+      IS Your Team Happy?
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ui-and-a11y/" title="UI and A11y.md" class="md-nav__link">
+      UI and A11y.md
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../distributed-caching/" title="Distributed Caching" class="md-nav__link">
+      Distributed Caching
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../learning-and-homelab/" title="Learning and Building a Homelab" class="md-nav__link">
+      Learning and Building a Homelab
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../kubenetes/" title="Kubenetes" class="md-nav__link">
+      Kubenetes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../roi-of-usability/" title="The ROI of Usability" class="md-nav__link">
+      The ROI of Usability
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#participatory-design" class="md-nav__link">
+    Participatory Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-usability-can-amplify-political-conflicts" class="md-nav__link">
+    Improving usability can amplify political conflicts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adversarial-design" class="md-nav__link">
+    Adversarial Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-we-make-something-so-easy-that-anyone-can-use-it-human-beings-become-interchangable" class="md-nav__link">
+    When we make something so easy that anyone can use it, human beings become interchangable.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permaculture" class="md-nav__link">
+    Permaculture
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="beyond-usability">Beyond Usability</h1>
+<p>Useability is a powerful tool. It insuures that we build do what it is meant to do.</p>
+<p>Usability has limitations.</p>
+<p>Research and Design phases:
+* Exploration
+* Creation
+* Validation
+* Refinements
+* Wash, rinse, and repeat</p>
+<p>Usability can help or harm. It's possible to create a highly usable product without it being useful.</p>
+<p>We have to understand complex systems and understand the workflows of our clients.</p>
+<p>Context is key. People don't always use tools in ways that we think they do.</p>
+<p>New Design Perspectives:</p>
+<p>How do we find the good stuff? Start with a problem.</p>
+<p>When usability empowers a user, it also disempowers that same user. "Don't make me think" by Steve Krug. Don't make your users have to learn new skills to operate your software.</p>
+<p>Look at the Crash of Air France in 2009. The autopilot was left on and within 5 mins crashed into the Atlantic. After post-crash analysis, it was found to be a problem of "de-skilling" due to more reliance on software over time. When they have to take manual intervation, they didn't know what to do due to lack of practise.</p>
+<p>Read "Ironies of Automation" paper. 3 pages long.</p>
+<p>Designers typically look at what users do with the product (flying by autopilot). They don't think about what users still have left to do.</p>
+<p>Design the non-use scenarios.</p>
+<p>Design for skill preservation.
+* Intermittent automation (don't use autopilot or dev tools too much)
+* Person-in-the-loop (human is handling the high level choices)
+* Awkward mish-mash (maintaining a mix of both automation and using skills at random)
+* Simulation (build a simulator for the humans to play along)</p>
+<p>###Usability does not guarantee usefulness</p>
+<p>Examlpe: Sign language translation gloves. It sounds great but deaf people say they could just use a keyboard like everyone else.</p>
+<p>Designer ---&gt; empathy ---&gt; users</p>
+<h3 id="participatory-design">Participatory Design</h3>
+<p>When developing a city, people got angry about certain buildings going up. The city scrapped the idea and coordinated a collection of the community to design it as they would like it. It worked!</p>
+<p>It's hard for designers to learn "enough" about the users. It's easier for users to learn "enough" about design.</p>
+<h3 id="improving-usability-can-amplify-political-conflicts">Improving usability can amplify political conflicts</h3>
+<p>"If you are neutral in situations of injustice, you have choen the side of the oppressor" Desmond Tutu.</p>
+<p>Nextdoor is an app for connecting with your neighbors. For years, it has been acused of providing users a way to racially profile their neighbors.</p>
+<h3 id="adversarial-design">Adversarial Design</h3>
+<p>Make people more productive with roadblocks. Use annoying design tricks to try to pull people out of their bad workflows.</p>
+<h3 id="when-we-make-something-so-easy-that-anyone-can-use-it-human-beings-become-interchangable">When we make something so easy that anyone can use it, human beings become interchangable.</h3>
+<p>Maslach Burnout Inventory:</p>
+<ul>
+<li>Depersonalization</li>
+<li>Emotional exhaustion</li>
+<li>Sense of powerlessness</li>
+</ul>
+<p>" The software changes how people work together. They'd become more disconnected; less likely to see and help one another and often less able to." - Doctor from Brigham and Women's Hospital.</p>
+<h3 id="permaculture">Permaculture</h3>
+<p>A design paradigm modelled after natural ecosystems where everything is viewed as webs of relationships.</p>
+<p>Ideas from Permaculture:</p>
+<ul>
+<li>Use edges and value the marginal.</li>
+<li>Produce no waste.</li>
+<li>Design from patterns to details.</li>
+<li>Apply self-regulations and accept feedback.</li>
+<li>Obtain a yield</li>
+<li>Observe and interact</li>
+<li>Creatively use and respond to change.</li>
+</ul>
+<p>Usability is one tool, not the only tool.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../iot-car-device/" title="IoT Car Device" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                IoT Car Device
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../life-after-java8/" title="Life After Java 8" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Life After Java 8
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.c51dfa35.min.js"></script>
+      <script src="../../assets/javascripts/bundle.eaaa3931.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.58d22e8e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
